@@ -1,0 +1,7 @@
+Flask
+Pillow
+numpy
+matplotlib
+docxtpl
+python-docx
+lxml

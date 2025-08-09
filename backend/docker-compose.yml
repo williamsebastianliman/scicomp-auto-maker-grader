@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask/assets:/app/assets
+      - ./flask/template:/app/template
+      - ./flask/output:/app/output_api
+    environment:
+      - MPLBACKEND=Agg
+      - USE_WORD=0
+    restart: unless-stopped
